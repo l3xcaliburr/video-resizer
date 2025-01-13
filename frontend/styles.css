@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #222f3f; /* Fallback background color */
-  background: url("https://videosizing-ui.s3.us-east-1.amazonaws.com/background.png")
+  background: url("https://raw.githubusercontent.com/l3xcaliburr/vid-resizer-test/main/frontend/background.png")
     no-repeat center center fixed;
   background-size: cover;
   color: #222f3f;

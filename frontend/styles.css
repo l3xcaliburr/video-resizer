@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Montserrat", serif;
+  margin: 0;
+  padding: 0;
+  background-color: #222f3f; /* Fallback background color */
+  background: url("https://videosizing-ui.s3.us-east-1.amazonaws.com/background.png")
+    no-repeat center center fixed;
+  background-size: cover;
+  color: #222f3f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* Preloader styling */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #222f3f; /* Dark background color */
+  z-index: 9999; /* Ensure it stays on top */
+}
+
+/* Hide the preloader after the background image loads */
+body.loaded #preloader {
+  display: none;
+}
+
+#app-container {
+  width: 450px;
+  background: rgba(35, 47, 62, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #f90;
+}
+
+p {
+  font-size: 0.95em;
+  margin-bottom: 20px;
+  color: #d1d5db;
+}
+
+form {
+  display: grid;
+  gap: 20px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  color: #f2f2f2;
+  font-size: 0.85em;
+  margin-bottom: 5px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+/* Resolution container for inputs */
+.resolution-container {
+  display: flex;
+  gap: 10px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.input-wrapper label {
+  font-weight: 600;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 10px;
+  border: 1px solid #f2f2f2;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Button styling */
+label[for="file"],
+button {
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  background-color: #f90;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+label[for="file"]:hover,
+button:hover {
+  background-color: #d77a00;
+  transform: translateY(-2px);
+}
+
+/* Remove spin buttons for number inputs */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#progress-container {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+#progress-fill {
+  width: 0%;
+  height: 100%;
+  background: #f90;
+  transition: width 0.3s ease;
+}
+
+#progress-text {
+  font-size: 0.9em;
+  color: #f2f2f2;
+  text-align: center;
+}
+
+#selected-file-name {
+  font-size: 0.9em;
+  color: #d1d5db;
+}
+
+.hidden {
+  display: none !important;
+}

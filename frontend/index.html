@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Resizer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="preloader"></div>
+    <div id="app-container">
+      <h1>Best Video Resizer Ever</h1>
+      <p>Upload your video to begin resizing!</p>
+      <form id="upload-form">
+        <label for="file">Choose a Video</label>
+        <input type="file" id="file" accept="video/*" required />
+
+        <p>Enter desired resolution:</p>
+        <!-- Resolution container with centered labels and inputs -->
+        <div class="resolution-container">
+          <div class="input-wrapper">
+            <label for="width">Width</label>
+            <input
+              type="number"
+              id="width"
+              placeholder="1280"
+              min="1"
+              required
+            />
+          </div>
+          <div class="input-wrapper">
+            <label for="height">Height</label>
+            <input
+              type="number"
+              id="height"
+              placeholder="720"
+              min="1"
+              required
+            />
+          </div>
+        </div>
+
+        <p id="selected-file-name"></p>
+        <button type="submit">Upload and Resize</button>
+      </form>
+      <div id="progress-container" class="hidden">
+        <div class="progress-bar">
+          <div id="progress-fill"></div>
+        </div>
+        <p id="progress-text"></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      window.addEventListener("load", () => {
+        document.body.classList.add("loaded");
+      });
+    </script>
+  </body>
+</html>

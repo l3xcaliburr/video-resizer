@@ -1,0 +1,6 @@
+{
+        "bucket": "videosizing-in",
+        "key": "test-video.mp4",
+        "output_bucket": "videosizing-out",
+        "output_key": "resized-video.mp4"
+    }

@@ -215,7 +215,7 @@ Setup Instructions
     ```python
     aws lambda update-function-configuration \
     --function-name VidResizer \
-    --environment "Variables={INPUT_BUCKET=$IN_BUCKET,MEDIACONVERT_ROLE=arn:aws:iam::$ACCOUNT_ID:role/$IAM_ROLE}"
+    --environment "Variables={INPUT_BUCKET=$IN_BUCKET,OUTPUT_BUCKET=$OUT_BUCKET,MEDIACONVERT_ROLE=arn:aws:iam::$ACCOUNT_ID:role/$IAM_ROLE}"
     ```
 
     Set Terminal session variables for the new function:
